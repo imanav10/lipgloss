@@ -96,7 +96,7 @@ func initialModel() model {
 	ti.Placeholder = "@Today"
 	ti.Focus()
 	ti.CharLimit = 156
-	ti.Width = 20
+	ti.Width = 90
 
 	return model{
 		textInput: ti,
@@ -111,11 +111,14 @@ func (m model) Init() tea.Cmd {
 func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	var cmd tea.Cmd
 
+	m.textInput.SetValue("")                       // Reset for new input
 	switch msg := msg.(type) {
 	case tea.KeyMsg:
 		switch msg.Type {
-		case tea.KeyEnter, tea.KeyCtrlC, tea.KeyEsc:
+		case tea.KeyCtrlC, tea.KeyEsc:
 			return m, tea.Quit
+		case tea.KeyEnter:
+			return m, nil
 		}
 
 	// We handle errors just like any other message
