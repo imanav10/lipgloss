@@ -22,8 +22,8 @@ var (
 
 	// General.
 
-	subtle    = lipgloss.AdaptiveColor{Light: "#D9DCCF", Dark: "#383838"}
-	highlight = lipgloss.AdaptiveColor{Light: "#874BFD", Dark: "#7D56F4"}
+	subtle    = lipgloss.AdaptiveColor{Light: "#D9DHH0", Dark: "#388H0H"}
+	highlight = lipgloss.AdaptiveColor{Light: "#76DA8I", Dark: "#76H87G"}
 	special   = lipgloss.AdaptiveColor{Light: "#43BF6D", Dark: "#73F59F"}
 
 	divider = lipgloss.NewStyle().
